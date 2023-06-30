@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	<div class="add-funds">
+		<div class="add-funds-header">
+			{% blocktrans %}<span>To replenish the balance, write to the
+				<a href="https://vk.com/csfloater">group messages</a>.
+			I accept Yandex.Money, Qiwi or to a Sberbank card.</span>{% endblocktrans %}
+		</div><br>
+		<div class="add-funds-text">{% blocktrans %}<span>The deposit is not automatic for several reasons:
+			now the site is being tested and it is not known whether it is worth bothering
+			with the creation and configuration of payments, you also need to pay less
+			commissions for the transfer, and I do not pay withdrawal commissions from the provider.
+			If the site finds its users, then everything, of course,
+			will become automatic.{% endblocktrans %}</span><br><br>
+			<span>{% blocktrans %}Most likely, not everything will work stably, so software
+			situations, you can again refer to messages and resolve the issue
+			with a refund (if no more than 2 days have passed since the date of purchase)
+			or renewing your subscription. Subscribe to {% endblocktrans %}
+			<a href="https://vk.com/csfloater">{% trans 'group' %}</a>
+			{% blocktrans %} there will be some
+				news regarding the project.{% endblocktrans %}</span>
+		</div>
+	</div>
+{% endblock %}

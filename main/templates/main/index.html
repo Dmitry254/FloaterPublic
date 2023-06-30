@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	<div class="main_describe">
+	    <div class="main-header">
+	    	<span>CsFloater</span>
+	    </div>
+		<div class="main-text">
+			<span>{% blocktrans %}A site for finding rare patterns, low
+				 floats or specific skins drawings. To open the entire functionality
+				 of the site, you can buy one of the{% endblocktrans %}
+				  <a href="subscriptions">{% trans 'subscriptions' %}</a>.</span><br><br>
+		</div>
+	</div>
+{% endblock %}

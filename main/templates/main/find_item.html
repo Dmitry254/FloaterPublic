@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	{% if demo %}
+		<div class="demo-version">
+			<span class="demo-version-text">
+			{% trans 'You are using a demo version of the site, which does not have a search for a specific item.' %}</span><br>
+			<span>
+			{% trans 'To remove restrictions, purchase' %}<a href="subscriptions">
+			{% trans 'subscription' %}</a>.</span>
+		</div>
+	{% else %}
+		<div class="find-item-upper">
+			<form class="search-name">
+				{{ choice_shop.as_p }}
+				{{ sorting_items.as_p }}
+				{{ set_name.as_p }}
+				<input class="button-apply" type="submit" value="{% trans 'Start parsing' %}">
+			</form><br>
+			<div class="example-items">
+				<span>
+				{% trans 'Copy the full name of one item from Steam, including quality. Examples:' %}</span><br>
+					 <span>
+						 - ★ Butterfly Knife | Doppler (Factory New)<br>
+						 - Desert Eagle | Hypnotic (Minimal Wear)<br>
+						 - ★ Huntsman Knife | Boreal Forest (Field-Tested)<br>
+						 - ★ Falchion Knife | Case Hardened (Well-Worn)<br>
+						 - AWP | Asiimov (Battle-Scarred)
+				 </span><br>
+			</div>
+		</div>
+		<table>
+			<thead class="table__caption">
+	        	<tr>
+	              	<th class="six__columns__caption">{% trans 'Item name' %}</th>
+	              	<th class="six__columns__caption caption__left">{% trans 'Float' %}</th>
+					<th class="six__columns__caption caption__left">{% trans 'Seed' %}</th>
+					<th class="six__columns__caption caption__left">{% trans 'Phase' %}</th>
+	              	<th class="six__columns__caption caption__left">{% trans 'Price' %}</th>
+	              	<th class="six__columns__caption caption__left">{% trans 'Average price' %}</th>
+	        	</tr>
+			</thead>
+			<tbody>
+	        	{% if market_result %}
+	            	{% for el in market_result %}
+	                	<tr>
+							<td><a class="table__a" href="{{ el.market_item_link }}">{{ el.market_item_name }}</a></td>
+	                        <td><a class="table__a">{{ el.market_item_float }}</a></td>
+							<td><a class="table__a">{{ el.market_item_seed }}</a></td>
+							<td><a class="table__a">{{ el.market_item_phase }}</a></td>
+	                        <td><a class="table__a">{{ el.market_item_price }}₽</a></td>
+	                        <td><a class="table__a">{{ el.shop }}</a></td>
+	                	</tr>
+	            	{% endfor %}
+	        	{% endif %}
+				{% if bit_result %}
+	            	{% for el in bit_result %}
+	                	<tr>
+							<td><a class="table__a" href="{{ el.bit_item_link }}">{{ el.bit_item_name }}</a></td>
+	                        <td><a class="table__a">{{ el.bit_item_float }}</a></td>
+							<td><a class="table__a">{{ el.bit_item_seed }}</a></td>
+							<td><a class="table__a">{{ el.bit_item_phase }}</a></td>
+	                        <td><a class="table__a">{{ el.bit_item_price }}$</a></td>
+	                        <td><a class="table__a">{{ el.shop }}</a></td>
+	                	</tr>
+	            	{% endfor %}
+	        	{% else %}
+				{% if market_result == False %}
+				<div class="explain-find-item">
+					<span>{% trans 'There is no such skin on the sites at the moment.' %}</span>
+				</div>
+				{% endif %}
+				<div class="explain-find-item">
+					<span>{% trans 'The request execution time depends on the number of skins on the sites. ' %}
+					{% trans 'Please do not refresh, leave the page and wait for the download to finish.' %}</span>
+				</div>
+	        	{% endif %}
+			</tbody>
+		</table>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,72 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ 	<div class="header">
+		<div class="header__section">
+			<div class="headerlogo"><a class="header__a" href="{% url 'home' %}">
+        	CsFloater</a></div>
+        	<div class="header__item headerButton"><a class="header__a" href="{% url 'market-float' %}">
+            	Market CS:GO</a>
+				<div class="dropmenu">
+					<div><a class="header__a" href="{% url 'market-float' %}">
+		            	Floats</a></div>
+					<div><a class="header__a" href="{% url 'market-patterns' %}">
+		            	Patterns</a></div>
+				</div>
+			</div>
+        	<div class="header__item headerButton"><a class="header__a" href="{% url 'bit-float' %}">
+            	BitSkins</a>
+				<div class="dropmenu">
+					<div><a class="header__a" href="{% url 'bit-float' %}">
+		            	Floats</a></div>
+					<div><a class="header__a" href="{% url 'bit-patterns' %}">
+		            	Patterns</a></div>
+				</div>
+			</div>
+			<div class="header__item headerButton"><a class="header__a" href="{% url 'find-item' %}">
+            	{% trans 'Find item' %}</a></div>
+		</div>
+		<div class="header__section">
+			<form class="header__item" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+			    <input name="next" type="hidden" value="{{ redirect_to }}" />
+				    <select name="language">
+				        {% get_current_language as LANGUAGE_CODE %}
+				        {% get_available_languages as LANGUAGES %}
+				        {% get_language_info_list for LANGUAGES as languages %}
+				        {% for language in languages %}
+				            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+							 selected="selected"{% endif %}>
+							 {{ language.name_local }} ({{ language.code }})
+				            </option>
+				        {% endfor %}
+				    </select>
+			    <input type="submit" value="{% trans 'Change' %}" />
+			</form>
+			{% if request.user.is_authenticated %}
+			<div class="header__avatar"><a href="account">
+				<img src={{ user.medium_avatar }} width="45" height="45" alt=""></a></div>
+	      	<div class="header__item headerButton"><a class="header__a" href="{% url 'account' %}">
+	          	{% trans 'Account' %}</a></div>
+			<div class="header__item headerButton"><a class="header__a" href="{% url 'exit' %}">
+		        {% trans 'Sign out' %}</a></div>
+			{% else %}
+			<div class="header__item headerButton"><a class="header__a" href="{% url 'signin' %}">
+	          	{% trans 'Sign in' %}</a></div>
+			{% endif %}
+		</div>
+  	</div>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

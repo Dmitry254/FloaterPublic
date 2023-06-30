@@ -1,0 +1,69 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	{% if demo %}
+		<div class="demo-version">
+			<span class="demo-version-text">{% trans 'You are using a demo version of the site with' %}
+				{% trans 'limiting the price of an item to ₽300 or $4.5.' %}</span><br>
+			<span>{% trans 'To remove restrictions, purchase' %}<a href="subscriptions">
+			{% trans 'subscription' %}</a>.</span>
+		</div>
+	{% endif %}
+	<form class="filters-form">
+		<div class="filters">
+			<div class="search">
+				{% trans 'Find item' %}
+				<div class="search-form" action="" method="get">
+					{{ search.as_p }}
+				</div>
+				<div class="search-form" action="" method="get">
+					{{ sort_filter.as_p }}
+				</div><br>
+			</div>
+			<div class="sorts">
+				<div class="min-max-sort-form" action="" method="get">
+					{% trans 'Float sort' %}
+					{{ float_sort.as_p }}
+				</div><br>
+				<div class="min-max-sort-form" action="" method="get">
+					{% trans 'Price sort' %}
+					{{ price_sort.as_p }}
+				</div><br>
+				<div class="min-max-sort-form" action="" method="get">
+					{% trans 'Average price sort' %}
+					{{ average_sort.as_p }}
+				</div><br>
+			</div>
+		</div>
+		<input class="button-apply" type="submit" value="{% trans 'Apply filters' %}">
+	</form>
+	<table>
+		<thead class="table__caption">
+        	<tr>
+              	<th>{% trans 'Item name' %}</th>
+              	<th class="four__columns__caption caption__left">{% trans 'Float' %}</th>
+              	<th class="four__columns__caption caption__left">{% trans 'Price' %}, $</th>
+              	<th class="four__columns__caption caption__left">{% trans 'Average price' %}, $</th>
+        	</tr>
+		</thead>
+			<tbody">
+            	{% if floats %}
+                	{% for el in floats %}
+                    	<tr>
+							<td><a class="table__a hover_text" href="{{ el.bit_item_link }}">{{ el.bit_item_name }}</a></td>
+	                        <td><a class="table__a">{{ el.bit_item_float }}</a></td>
+	                        <td><a class="table__a">{{ el.bit_item_price }}</a></td>
+	                        <td><a class="table__a">{{ el.bit_item_avg_price }}</a></td>
+                    	</tr>
+                	{% endfor %}
+            	{% else %}
+                	<p>{% trans 'Database reloading' %}</p>
+            	{% endif %}
+			</tbody>
+		</table>
+{% endblock %}

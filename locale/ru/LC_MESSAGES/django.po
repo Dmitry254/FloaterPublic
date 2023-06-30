@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-05 12:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\bitpattern\forms.py:7 .\bitpattern\forms.py:12 .\bitpattern\forms.py:17
+#: .\bitskins\forms.py:7 .\bitskins\forms.py:12 .\bitskins\forms.py:17
+#: .\market\forms.py:7 .\market\forms.py:12 .\market\forms.py:17
+#: .\marketpattern\forms.py:7 .\marketpattern\forms.py:12
+#: .\marketpattern\forms.py:17
+msgid "Min"
+msgstr "От"
+
+#: .\bitpattern\forms.py:8 .\bitpattern\forms.py:13 .\bitpattern\forms.py:18
+#: .\bitskins\forms.py:8 .\bitskins\forms.py:13 .\bitskins\forms.py:18
+#: .\market\forms.py:8 .\market\forms.py:13 .\market\forms.py:18
+#: .\marketpattern\forms.py:8 .\marketpattern\forms.py:13
+#: .\marketpattern\forms.py:18
+msgid "Max"
+msgstr "До"
+
+#: .\bitpattern\forms.py:22 .\bitskins\forms.py:22 .\finditem\forms.py:6
+#: .\market\forms.py:22 .\marketpattern\forms.py:22
+msgid "Name"
+msgstr "Имя"
+
+#: .\bitpattern\forms.py:26 .\main\templates\main\bit_patterns.html:59
+#: .\main\templates\main\find_item.html:42
+#: .\main\templates\main\market_patterns.html:59
+msgid "Seed"
+msgstr "Seed"
+
+#: .\bitpattern\forms.py:30 .\main\templates\main\bit_patterns.html:60
+#: .\main\templates\main\find_item.html:43
+#: .\main\templates\main\market_patterns.html:60 .\marketpattern\forms.py:30
+msgid "Phase"
+msgstr "Фаза"
+
+#: .\bitpattern\forms.py:34 .\bitskins\forms.py:26 .\market\forms.py:26
+#: .\marketpattern\forms.py:34
+msgid "A-Z"
+msgstr "А-Я"
+
+#: .\bitpattern\forms.py:35 .\bitskins\forms.py:27 .\finditem\forms.py:15
+#: .\market\forms.py:27 .\marketpattern\forms.py:35
+msgid "Increase float"
+msgstr "Возрастание float"
+
+#: .\bitpattern\forms.py:35 .\bitskins\forms.py:27 .\finditem\forms.py:15
+#: .\market\forms.py:27 .\marketpattern\forms.py:35
+msgid "Decrease float"
+msgstr "Убывание float"
+
+#: .\bitpattern\forms.py:36 .\bitskins\forms.py:28 .\finditem\forms.py:16
+#: .\market\forms.py:28 .\marketpattern\forms.py:36
+msgid "Increase price"
+msgstr "Возрастание цены"
+
+#: .\bitpattern\forms.py:36 .\bitskins\forms.py:28 .\finditem\forms.py:16
+#: .\market\forms.py:28 .\marketpattern\forms.py:36
+msgid "Decrease price"
+msgstr "Убывание цены"
+
+#: .\bitpattern\forms.py:37 .\bitskins\forms.py:29 .\finditem\forms.py:17
+#: .\market\forms.py:29 .\marketpattern\forms.py:37
+msgid "Sort by"
+msgstr "Сортировка"
+
+#: .\buysub\forms.py:8
+msgid "Choose tariff"
+msgstr "Выберите тариф"
+
+#: .\buysub\forms.py:12
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: .\finditem\forms.py:10
+msgid "Market CS:GO and BitSkins"
+msgstr "Market CS:GO и BitSkins"
+
+#: .\finditem\forms.py:11
+msgid "Shop"
+msgstr "Площадка"
+
+#: .\floater\settings.py:120
+msgid "Russian"
+msgstr "Русский"
+
+#: .\floater\settings.py:121
+msgid "English"
+msgstr ""
+
+#: .\main\templates\main\account.html:21
+msgid "Balance"
+msgstr "Баланс"
+
+#: .\main\templates\main\account.html:22
+#: .\main\templates\main\subscriptions.html:76
+msgid "Add funds"
+msgstr "Пополнить баланс"
+
+#: .\main\templates\main\account.html:26
+msgid "Subscription until"
+msgstr "Подписка до"
+
+#: .\main\templates\main\account.html:27
+msgid "Renew subscription"
+msgstr "Продлить подписку"
+
+#: .\main\templates\main\add_funds.html:11
+msgid ""
+"<span>To replenish the balance, write to the\n"
+"\t\t\t\t<a href=\"https://vk.com/csfloater\">group messages</a>.\n"
+"\t\t\tI accept Yandex.Money, Qiwi or to a Sberbank card.</span>"
+msgstr "Для пополнения баланса пишите в <a href=\"https://vk.com/csfloater\">сообщения группы</a>. Я принимаю Яндекс.Деньги, Qiwi или на карту Сбербанка."
+
+#: .\main\templates\main\add_funds.html:15
+msgid ""
+"<span>The deposit is not automatic for several reasons:\n"
+"\t\t\tnow the site is being tested and it is not known whether it is worth "
+"bothering\n"
+"\t\t\twith the creation and configuration of payments, you also need to pay "
+"less\n"
+"\t\t\tcommissions for the transfer, and I do not pay withdrawal commissions "
+"from the provider.\n"
+"\t\t\tIf the site finds its users, then everything, of course,\n"
+"\t\t\twill become automatic."
+msgstr ""
+"Пополнение не автоматическое по нескольким причинам: \t\t\tсейчас сайт "
+"тестируется и неизвестно стоит ли заморачиваться \t\t\tс созданием и "
+"настройкой платежей, так же Вам нужно платить меньше \t\t\tкомиссий за "
+"перевод, а мне не платить комиссии вывода с провайдера. \t\t\tЕсли сайт "
+"найдёт своих пользователей, то всё, конечно, \t\t\tстанет автоматическим."
+
+#: .\main\templates\main\add_funds.html:21
+msgid ""
+"Most likely, not everything will work stably, so software\n"
+"\t\t\tsituations, you can again refer to messages and resolve the issue\n"
+"\t\t\twith a refund (if no more than 2 days have passed since the date of "
+"purchase)\n"
+"\t\t\tor renewing your subscription. Subscribe to "
+msgstr ""
+"Скорее всего не всё будет работать стабильно, поэтому по \t\t\tситуации "
+"можно опять же обратиться в сообщения и решить вопрос \t\t\tс возвратом "
+"средств (если прошло не более 2 суток с момента покупки) \t\t\tили "
+"продлением подписки. Подписывайтесь на "
+
+#: .\main\templates\main\add_funds.html:25
+msgid "group"
+msgstr "группу"
+
+#: .\main\templates\main\add_funds.html:26
+msgid ""
+" there will be some\n"
+"\t\t\t\tnews regarding the project."
+msgstr "там будут какие-то \t\t\tновости касаемо проекта."
+
+#: .\main\templates\main\base.html:37 .\main\templates\main\bit_float.html:20
+#: .\main\templates\main\bit_patterns.html:20
+#: .\main\templates\main\market_float.html:20
+#: .\main\templates\main\market_patterns.html:20
+msgid "Find item"
+msgstr "Поиск предмета"
+
+#: .\main\templates\main\base.html:53
+msgid "Change"
+msgstr "Сменить"
+
+#: .\main\templates\main\base.html:59
+msgid "Account"
+msgstr "Аккаунт"
+
+#: .\main\templates\main\base.html:61
+msgid "Sign out"
+msgstr "Выйти"
+
+#: .\main\templates\main\base.html:64
+#: .\main\templates\main\subscriptions.html:87
+msgid "Sign in"
+msgstr "Войти"
+
+#: .\main\templates\main\bit_float.html:11
+#: .\main\templates\main\bit_patterns.html:11
+#: .\main\templates\main\market_float.html:11
+#: .\main\templates\main\market_patterns.html:11
+msgid "You are using a demo version of the site with"
+msgstr "Вы используете демо версию сайта с "
+
+#: .\main\templates\main\bit_float.html:12
+#: .\main\templates\main\bit_patterns.html:12
+#: .\main\templates\main\market_float.html:12
+#: .\main\templates\main\market_patterns.html:12
+msgid "limiting the price of an item to ₽300 or $4.5."
+msgstr "ограничением цены предмета до 300₽ или 4,5 $."
+
+#: .\main\templates\main\bit_float.html:13
+#: .\main\templates\main\bit_patterns.html:13
+#: .\main\templates\main\find_item.html:14
+#: .\main\templates\main\market_float.html:13
+#: .\main\templates\main\market_patterns.html:13
+msgid "To remove restrictions, purchase"
+msgstr "Для снятия ограничений приобретите"
+
+#: .\main\templates\main\bit_float.html:14
+#: .\main\templates\main\bit_patterns.html:14
+#: .\main\templates\main\find_item.html:15
+#: .\main\templates\main\market_float.html:14
+#: .\main\templates\main\market_patterns.html:14
+msgid "subscription"
+msgstr "подписку"
+
+#: .\main\templates\main\bit_float.html:30
+#: .\main\templates\main\bit_patterns.html:39
+#: .\main\templates\main\market_float.html:30
+#: .\main\templates\main\market_patterns.html:39
+msgid "Float sort"
+msgstr "Сортировка по float"
+
+#: .\main\templates\main\bit_float.html:34
+#: .\main\templates\main\bit_patterns.html:43
+#: .\main\templates\main\market_float.html:34
+#: .\main\templates\main\market_patterns.html:43
+msgid "Price sort"
+msgstr "Сортировка по цене"
+
+#: .\main\templates\main\bit_float.html:38
+#: .\main\templates\main\bit_patterns.html:47
+#: .\main\templates\main\market_float.html:38
+#: .\main\templates\main\market_patterns.html:47
+msgid "Average price sort"
+msgstr "Сортировка по средней цене"
+
+#: .\main\templates\main\bit_float.html:43
+#: .\main\templates\main\bit_patterns.html:52
+#: .\main\templates\main\market_float.html:43
+#: .\main\templates\main\market_patterns.html:52
+msgid "Apply filters"
+msgstr "Применить фильтры"
+
+#: .\main\templates\main\bit_float.html:48
+#: .\main\templates\main\bit_patterns.html:57
+#: .\main\templates\main\find_item.html:40
+#: .\main\templates\main\market_float.html:48
+#: .\main\templates\main\market_patterns.html:57
+msgid "Item name"
+msgstr "Название предмета"
+
+#: .\main\templates\main\bit_float.html:49
+#: .\main\templates\main\bit_patterns.html:58
+#: .\main\templates\main\find_item.html:41
+#: .\main\templates\main\market_float.html:49
+#: .\main\templates\main\market_patterns.html:58
+msgid "Float"
+msgstr ""
+
+#: .\main\templates\main\bit_float.html:50
+#: .\main\templates\main\bit_patterns.html:61
+#: .\main\templates\main\find_item.html:44
+#: .\main\templates\main\market_float.html:50
+#: .\main\templates\main\market_patterns.html:61
+msgid "Price"
+msgstr "Цена"
+
+#: .\main\templates\main\bit_float.html:51
+#: .\main\templates\main\bit_patterns.html:62
+#: .\main\templates\main\find_item.html:45
+#: .\main\templates\main\market_float.html:51
+#: .\main\templates\main\market_patterns.html:62
+msgid "Average price"
+msgstr "Средняя цена"
+
+#: .\main\templates\main\bit_float.html:65
+#: .\main\templates\main\bit_patterns.html:78
+#: .\main\templates\main\market_float.html:65
+#: .\main\templates\main\market_patterns.html:78
+msgid "Database reloading"
+msgstr "База данных обновляется"
+
+#: .\main\templates\main\bit_patterns.html:29
+#: .\main\templates\main\market_patterns.html:29
+msgid "Find pattern"
+msgstr "Поиск паттерна"
+
+#: .\main\templates\main\confirm_buy.html:10
+msgid "Click to confirm purchase"
+msgstr "Нажмите, чтобы подтвердить покупку"
+
+#: .\main\templates\main\confirm_buy.html:14
+msgid "Submit buy"
+msgstr "Подтвердить"
+
+#: .\main\templates\main\find_item.html:12
+msgid ""
+"You are using a demo version of the site, which does not have a search for a "
+"specific item."
+msgstr ""
+"Вы используете демо-версию сайта, в которой нет поиска по конкретной вещи."
+
+#: .\main\templates\main\find_item.html:23
+msgid "Start parsing"
+msgstr "Начать парсинг"
+
+#: .\main\templates\main\find_item.html:27
+msgid "Copy the full name of one item from Steam, including quality. Examples:"
+msgstr ""
+"Копируйте полное название одного предмета из Steam,включая качество. Примеры:"
+
+#: .\main\templates\main\find_item.html:75
+msgid "There is no such skin on the sites at the moment."
+msgstr "Такого скина нет на сайтах в данный момент."
+
+#: .\main\templates\main\find_item.html:79
+msgid ""
+"The request execution time depends on the number of skins on the sites. "
+msgstr "Время выполнения запроса зависит от количества скина на сайтах."
+
+#: .\main\templates\main\find_item.html:80
+msgid ""
+"Please do not refresh, leave the page and wait for the download to finish."
+msgstr ""
+"Пожалуйста, не обновляйте, не закрывайте страницу и дождитесь окончания "
+"загрузки."
+
+#: .\main\templates\main\index.html:14
+msgid ""
+"A site for finding rare patterns, low\n"
+"\t\t\t\t floats or specific skins drawings. To open the entire "
+"functionality\n"
+"\t\t\t\t of the site, you can buy one of the"
+msgstr ""
+"Сайт для поиска редких паттернов, низких флоатов или определенных рисунков "
+"скинов. На сайте действует система "
+
+#: .\main\templates\main\index.html:17
+msgid "subscriptions"
+msgstr "подписок"
+
+#: .\main\templates\main\index.html:18
+msgid ""
+"The site is currently in a test period. If a\n"
+"\t\t\t\tthere is a sufficient number of subscriptions and online, then\n"
+"\t\t\t\tthe site will continue develop. It all depends\n"
+"\t\t\t\ton you."
+msgstr ""
+"На данный момент сайт находится в тестовом периоде. Если будет достаточное "
+"количество подписок и онлайна,         то сайт продолжит развиваться. Всё "
+"зависит от Вас."
+
+#: .\main\templates\main\subscriptions.html:11
+msgid "Types of subscriptions"
+msgstr "Виды подписок"
+
+#: .\main\templates\main\subscriptions.html:12
+msgid ""
+"Subscribing to the site\n"
+"\t\t\t\tgives full access to all site services for the selected period."
+msgstr ""
+"Подписка на сайт даёт полный доступ ко всем сервисам сайта на выбранный "
+"период."
+
+#: .\main\templates\main\subscriptions.html:22
+msgid ""
+"Subscription for 10 days from moment of purchase<br><br>\n"
+"\t\t\t\t\t\tDesigned to check functionality of the site, or to buy\n"
+"\t\t\t\t\t\tpersonal items for the game"
+msgstr ""
+"Подписка на 10 дней с момента покупки<br><br>Предназначена для проверки "
+"функционала сайта,         либо для покупки личных вещей для игры, а не для "
+"трейда"
+
+#: .\main\templates\main\subscriptions.html:33
+msgid ""
+"Subscription for 30 days from moment of purchase<br><br>\n"
+"\t\t\t\t\t\tDesigned for a bargain purchase things for the trade\n"
+"\t\t\t\t\t\twith subsequent profit"
+msgstr ""
+"Подписка на 30 дней с момента покупки<br><br>Предназначена для выгодной "
+"покупки вещей для трейда         с последующим получением прибыли"
+
+#: .\main\templates\main\subscriptions.html:44
+msgid ""
+"Subscription for 90 days from moment of purchase<br><br>\n"
+"\t\t\t\t\t\tAllows you to save relatively subscription for 1 month.\n"
+"\t\t\t\t\t\tAdditional functionality is not provides"
+msgstr ""
+"Подписка на 90 дней с момента покупки<br><br>Позволит сэкономить "
+"относительно         подписки на 1 месяц. Дополнительного функционала не "
+"предоставляет"
+
+#: .\main\templates\main\subscriptions.html:55
+msgid ""
+"Application to your computer,\n"
+"\t\t\t\t\t\twhich includes all the functionality of the site and gives\n"
+"\t\t\t\t\t\tthe ability to set any settings for self\n"
+"\t\t\t\t\t\tsearch skins"
+msgstr ""
+"Приложение на Ваш компьютер, которое включает в себя весь функционал сайта и "
+"даёт \t\tвозможность установить любые настройки для самостоятельного поиска "
+"скинов"
+
+#: .\main\templates\main\subscriptions.html:70
+msgid "Buy"
+msgstr "Купить"
+
+#: .\main\templates\main\subscriptions.html:75
+msgid "Not enough balance."
+msgstr "Недостаточно средств."
+
+#: .\main\templates\main\subscriptions.html:81
+msgid "Unknown error, please try again if subscription is not renewed."
+msgstr ""
+"неизвестная ошибка, попробуйте ещё раз, если подписка не продлена и средства "
+"не сняты."
+
+#: .\main\templates\main\subscriptions.html:86
+msgid "First you need "
+msgstr "Сначала нужно "
+
+#: .\signin\managers.py:15
+msgid "The steamid must be set"
+msgstr ""
+
+#: .\signin\managers.py:30
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: .\signin\managers.py:32
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: .\signin\models.py:11
+msgid "steamid"
+msgstr ""

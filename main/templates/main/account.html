@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	<div class="account-describe account-text">
+		<div class="account-logo">
+			<a href="account"><img src={{ user.full_avatar }} alt=""></a><br>
+		</div>
+		<div class="block">
+			<div class="account-nickname">
+				<span>{{ user.nickname }}</span>
+			</div><br>
+			<div class="account-steamid">
+				<span>SteamID: {{ user.steamid }}</span>
+			</div><br>
+			<div class="account-balance">
+				<span>{% trans 'Balance' %} {{ user.user_balance }}$
+				<a class="account-text hover_text" href="add-funds">{% trans 'Add funds' %}</a>
+				1$ = 60₽</span>
+			</div><br>
+			<div class="sub-date">
+				<span>{% trans 'Subscription until' %} {{ date }}</span>
+				<a class="account-text hover_text" href="subscriptions">{% trans 'Renew subscription' %}</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+	{% if request.user.is_authenticated %}
+		<div class="sub-describe">
+			<span class="sub-header">{% trans 'Types of subscriptions' %}</span><br><br>
+			<span class="sub-text">{% blocktrans %}Subscribing to the site
+				gives full access to all site services for the selected period.{% endblocktrans %}</span>
+		</div>
+		<div class="subscriptions">
+			<div class="sub-for-one-week sub-padding-bottom">
+				<div class="sub-header-borders">
+			    	<span class="sub-header-border-text">Lite - 2$</span>
+				</div>
+				<div class="sub-body-borders">
+				    <span class="sub-body-border-text">
+						{% blocktrans %}Subscription for 10 days from moment of purchase<br><br>
+						Designed to check functionality of the site, or to buy
+						personal items for the game{% endblocktrans %}</span>
+				</div>
+			</div>
+			<div class="sub-for-one-mounth sub-padding-bottom">
+				<div class="sub-header-borders">
+			    	<span class="sub-header-border-text">Normal - 5$</span>
+			    </div>
+				<div class="sub-body-borders">
+				    <span class="sub-body-border-text">
+						{% blocktrans %}Subscription for 30 days from moment of purchase<br><br>
+						Designed for a bargain purchase things for the trade
+						with subsequent profit{% endblocktrans %}</span>
+				</div>
+			</div>
+			<div class="sub-for-three-mounth sub-padding-bottom">
+				<div class="sub-header-borders">
+				    <span class="sub-header-border-text">Heavy - 13$</span>
+				</div>
+				<div class="sub-body-borders">
+				    <span class="sub-body-border-text">
+						{% blocktrans %}Subscription for 90 days from moment of purchase<br><br>
+						Allows you to save relatively subscription for 1 month.
+						Additional functionality is not provides{% endblocktrans %}</span>
+				</div>
+			</div>
+			<div class="buy-app sub-padding-bottom">
+				<div class="sub-header-borders">
+				    <span class="sub-header-border-text">App - soon</span>
+				</div>
+				<div class="sub-body-borders">
+				    <span class="sub-body-border-text">
+						{% blocktrans %}Application to your computer,
+						which includes all the functionality of the site and gives
+						the ability to set any settings for self
+						search skins{% endblocktrans %}</span>
+				</div>
+				<!-- <form class="submit-buy-sub-button" action="index.html" method="post">
+					{% csrf_token %}
+					<input type="submit" value="Купить за 50$">
+				</form> -->
+			</div>
+		</div>
+		{% if sub_type %}
+			<form class="account-text" action="" method="post">
+				{% csrf_token %}
+				{{sub_type.as_p}}
+				<input class="button-apply" type="submit" name="" value="{% trans 'Buy' %}">
+			</form>
+		{% endif %}
+		{% if error == "balance" %}
+			<div class="demo-version">
+				<span>{% trans 'Not enough balance.' %}<br>
+				<a class="account-text hover_text" href="add-funds">{% trans 'Add funds' %}</a></span>
+			</div>
+		{% endif %}
+		{% if error == "unknown" %}
+			<div class="demo-version">
+				<span>{% trans 'Unknown error, please try again if subscription is not renewed.' %}</span>
+			</div>
+		{% endif %}
+	{% else %}
+		<div class="demo-version">
+			<span>{% trans 'First you need ' %}<a href="{% url 'signin' %}">
+	          	{% trans 'Sign in' %}</a></span>
+		</div>
+	{% endif %}
+{% endblock %}
